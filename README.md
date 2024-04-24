@@ -1,3 +1,3 @@
 # ujs14
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/m0x0m0x/ujs14)
+> Continuation of Study , this one has Section14:OOP with JS
