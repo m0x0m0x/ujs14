@@ -4,7 +4,7 @@
 210: Prototypes 
 */
 // Import zone
-import { mainHead, subHead } from "../UTILS/text.js";
+import { mainHead, paraText, subHead } from "../UTILS/text.js";
 // End import zone
 mainHead("210: Prototypes");
 console.log("hello");
@@ -16,11 +16,6 @@ const Person = function (firstName, birthYear, fetish) {
   this.firstName = firstName;
   this.birthYear = birthYear;
   this.fetish = fetish;
-
-  // Never create methods in constructor
-  //   this.calcAge = function () {
-  //     console.log(2037 - this.birthYear);
-  //   };
 };
 
 const ina = new Person("ina", 2000, "scent");
@@ -38,3 +33,11 @@ Person.prototype.calcAge = function () {
 
 ina.calcAge();
 jina.calcAge();
+
+paraText("Prining just he protoype");
+console.log(ina.__proto__);
+console.log(jina.___proto__ === Person.prototype);
+
+console.log(Person.prototype.isPrototypeOf(ina));
+console.log(Person.prototype.isPrototypeOf(jina));
+console.log(Person.prototype.isPrototypeOf(Person));
