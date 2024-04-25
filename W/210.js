@@ -41,3 +41,12 @@ console.log(jina.___proto__ === Person.prototype);
 console.log(Person.prototype.isPrototypeOf(ina));
 console.log(Person.prototype.isPrototypeOf(jina));
 console.log(Person.prototype.isPrototypeOf(Person));
+
+subHead("Setting properties on the prototype");
+
+Person.prototype.species = "Mistress";
+console.log(ina.species, jina.species);
+
+paraText("Checking the prototype");
+console.log(ina.hasOwnProperty("firstName"));
+console.log(ina.hasOwnProperty("species"));
