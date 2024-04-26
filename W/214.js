@@ -27,6 +27,11 @@ class PersonCL {
   calcAge() {
     console.log(2037 - this.birthYear);
   }
+
+  // greeter function
+  greeter() {
+    console.log(`Lick ${this.firstName} AssAndPussy`);
+  }
 }
 
 // Instance is here
@@ -42,3 +47,4 @@ PersonCL.prototype.greet = function () {
 };
 
 jess.greet();
+jess.greeter();
