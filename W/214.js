@@ -48,3 +48,9 @@ PersonCL.prototype.greet = function () {
 
 jess.greet();
 jess.greeter();
+
+/*
+1. Classes are not hoisted - need to be declared 
+2. First class citizens - can pass them in to function and return to function 
+3. Body executed in strict mode - It will be in strict mode
+*/
