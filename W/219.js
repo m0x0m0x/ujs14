@@ -24,3 +24,19 @@ Per1.prototype.calcAge = function () {
 
 const jes = new Per1("jess", 2009, "spit");
 jes.calcAge();
+
+subHead("Build Construcctor Function for student");
+
+// Student constructor function
+const Stu = function (firstName, birthYear, course) {
+  Per1.call(this, firstName, birthYear);
+  this.course = course;
+};
+
+Stu.prototype.intro = function () {
+  console.log(`I am ${this.firstName} and ${this.course}`);
+};
+
+const ina = new Stu("ina", 2000, "Fetish Course");
+console.log(ina);
+ina.intro(0);
