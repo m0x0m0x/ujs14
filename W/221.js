@@ -58,6 +58,11 @@ class StudentCl extends PersonCL {
   intro() {
     console.log(`Lick ${this.fullName} ass she is ${this.course}`);
   }
+
+  // Overriding calcAge method - Also called shadowing
+  calcAge() {
+    console.log(`me ${2037 - this.birthYear}`);
+  }
 }
 
 const jina = new StudentCl("Jina Sniff", 2002, "Booty Queen");
