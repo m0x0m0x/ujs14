@@ -48,6 +48,8 @@ EV.prototype.chaBat = function (chaTo) {
   this.charge = chaTo;
 };
 
+// If this was not defined , it would inherit the acc from parent class
+// Accoring to the prototype chain
 EV.prototype.acc = function () {
   this.speed += 20;
   this.charge--;
