@@ -37,6 +37,21 @@ class Account {
   withdraw(val) {
     this.deposit(-val);
   }
+
+  // Approve Loan
+  approveLoan(val) {
+    return true;
+  }
+
+  // Request Loan
+  requestLoan(val) {
+    if (this.approveLoan(val)) {
+      this.deposit(val);
+      console.log(
+        `LoanBastard Approved - $${new Intl.NumberFormat("en-US").format(val)}`
+      );
+    }
+  }
   /////////////////////
 }
 
@@ -53,3 +68,10 @@ acc1.deposit(250);
 //Withdraw
 // acc1.move.push(-100);
 acc1.withdraw(140);
+
+// Accessing a pin
+// console.log(acc1.pin);
+
+// requesting loan
+acc1.requestLoan(3000000);
+acc1.approveLoan(100);
