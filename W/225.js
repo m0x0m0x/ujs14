@@ -65,6 +65,10 @@ class Account {
     return true;
   }
 
+  static helper() {
+    console.log("HelperPuss");
+  }
+
   /////////////////////
 }
 
@@ -76,6 +80,8 @@ There r 8 methods but only 4 focusssed here
 2. Private Fields
 3. Public Methods
 4. Private Methods
+
+There is also a static method
 ----
 `);
 
@@ -107,3 +113,5 @@ acc1.withdraw(140);
 // console.log(acc1.#move);
 console.log(acc1.getMovements());
 // console.log(acc1.#approveL+oan(200));
+
+Account.helper();
