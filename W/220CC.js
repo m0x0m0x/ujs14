@@ -48,8 +48,20 @@ EV.prototype.chaBat = function (chaTo) {
   this.charge = chaTo;
 };
 
+EV.prototype.acc = function () {
+  this.speed += 20;
+  this.charge--;
+  console.log(
+    `%c ${this.make} ➡️ ${this.speed} km/h with 🪫${this.charge}`,
+    "color:green"
+  );
+};
+
 const tezl = new EV("Tez", 129, 23);
 console.log(tezl);
 
 tezl.chaBat(90);
 console.log(tezl);
+
+tezl.dcc();
+tezl.acc(0);
