@@ -50,8 +50,17 @@ class StudentCl extends PersonCL {
   constructor(fullName, birthYear, course) {
     // Constructor function of the parent class
 
-    // Declaration must be first
+    // Declaration must be first - Super is constructor function of the parent class - Needs to happen first - responsible for creating the this keyword
     super(fullName, birthYear);
     this.course = course;
   }
+
+  intro() {
+    console.log(`Lick ${this.fullName} ass she is ${this.course}`);
+  }
 }
+
+const jina = new StudentCl("Jina Sniff", 2002, "Booty Queen");
+console.log(jina);
+jina.intro();
+jina.calcAge();
