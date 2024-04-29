@@ -33,10 +33,27 @@ const Stu = function (firstName, birthYear, course) {
   this.course = course;
 };
 
+// Linking prsotoype
+Stu.prototype = Object.create(Per1.prototype);
+
 Stu.prototype.intro = function () {
   console.log(`I am ${this.firstName} and ${this.course}`);
 };
 
 const ina = new Stu("ina", 2000, "Fetish Course");
 console.log(ina);
-ina.intro(0);
+ina.intro();
+ina.calcAge();
+
+paraText("Examing the prototypes");
+console.log(ina);
+console.log(ina.__proto__);
+console.log(ina.__proto__.__proto__);
+
+console.log(ina instanceof Stu);
+console.log(ina instanceof Per1);
+console.log(ina instanceof Object);
+
+// Fixing the prototype reference
+Stu.prototype.constructor = Stu;
+console.dir(Stu.prototype.constructor);
